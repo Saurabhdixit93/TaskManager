@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+  <title>Task Manager With JWT</title>
+</head>
+
+<body>
+  <h1>Project Name - Task Manager With JWT</h1>
+
+  <h2>Table of Contents</h2>
+
+  <ul>
+    <li><a href="#project-description">Project Description</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#api-documentation">API Documentation</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+  </ul>
+
+  <h2 id="project-description">Project Description</h2>
+
+  <p>The Task Manager with JWT project is a web application designed to manage tasks using JSON Web Tokens (JWT) for authentication and authorization. It allows users to create, edit, and delete tasks in a secure and efficient manner. The application provides a user-friendly interface with features such as task filtering, sorting, and search. The project aims to simplify task management and improve user experience while ensuring data privacy and security through the use of JWT.</p>
+
+  <h2 id="installation">Installation</h2>
+
+  <ol>
+    <li>Clone the repository:</li>
+  </ol>
+  git clone https://github.com/saurabhdixit93/TaskManager.git
+ 
+  <ol start="2">
+    <li>Navigate to the project directory:</li>
+  </ol>
+  cd project-directory
+  <ol start="3">
+    <li>Install the dependencies:</li>
+  </ol>
+  npm install
+  <ol start="4">
+    <li>Start the development server:</li>
+  </ol>
+  npm start
+  <ol start="5">
+    <li>Open the browser and check <a href="http://localhost:3500">localhost:3500</a></li>
+  </ol>
+
+  <h1 id="api-documentation">API Documentation</h1>
+
+  <p>This API documentation provides information about the endpoints available in the project, including user account
+    management and task management.</p>
+
+  <h2>Table of Contents</h2>
+
+  <ul>
+    <li><a href="#user-account-management">User Account Management</a></li>
+    <li><a href="#task-management">Task Management</a></li>
+  </ul>
+
+  <h2 id="user-account-management">User Account Management</h2>
+
+  <h3 id="create-a-new-user-account">Create a New User Account</h3>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Endpoint</th>
+        <th>Method</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>/create-account</td>
+        <td>POST</td>
+        <td>Creates a new user account with the provided user account details.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 id="create-a-new-user-account">Login to User Account</h3>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Endpoint</th>
+        <th>Method</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>/login-account</td>
+        <td>POST</td>
+        <td>Logs in to an existing user account using the provided email and password.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+  <h3 id="create-a-new-user-account">Update User Account Information</h3>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Endpoint</th>
+        <th>Method</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>/update-account/:userId</td>
+        <td>PUT</td>
+        <td>Updates the account information for the specified user.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 id="create-a-new-user-account">Delete User Account</h3>
+
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Endpoint</th>
+        <th>Method</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>/delete-account/:userId</td>
+        <td>DELETE</td>
+        <td>Deletes the specified user account.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 id="task-management">Task Management</h2>
+    <h3 id="create-a-new-task">Create a New Task</h3>
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Endpoint</th>
+            <th>Method</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>/create-new-task</td>
+            <td>POST</td>
+            <td>Creates a new task associated with the authenticated user.</td>
+          </tr>
+        </tbody>
+    </table>
+
+    <h3 id="create-a-new-task">Retrieve All Task</h3>
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Endpoint</th>
+            <th>Method</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>/get-tasks/:userId</td>
+            <td>GET</td>
+            <td>Retrieves all tasks associated with the specified user ID.</td>
+          </tr>
+        </tbody>
+    </table>
+    <h3 id="create-a-new-task">Update Specific Task</h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Endpoint</th>
+          <th>Method</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>/update-task/:taskId</td>
+          <td>PUT</td>
+          <td>Updates the specified task by its task ID.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 id="create-a-new-task">Delete a Task</h3>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Endpoint</th>
+          <th>Method</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>/delete-task/:taskId</td>
+          <td>DELETE</td>
+          <td>Deletes the specified task by its task ID.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="contributing">Contributing</h2>
+
+    <p>Contributions are welcome! Here's how you can contribute to the project:</p>
+
+    <ol>
+      <li>Fork the repository.</li>
+      <li>Create a new branch for your feature/bug fix.</li>
+      <li>Make your changes and commit them.</li>
+      <li>Push your changes to your forked repository.</li>
+      <li>Submit a pull request.</li>
+    </ol>
+
+    <p>Please make sure to follow the established coding style and conventions.</p>
+
+    <h2 id="license">License</h2>
+
+    <p>This project is licensed under the MIT License. See the <code>LICENSE</code> file for more information.</p>
+
+  </body>
+
+</html>
